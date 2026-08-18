@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Our Work — Signal Digital | Case Studies & Results</title>
+  <meta name="description" content="Real results from real businesses. See how Signal Digital has helped e-commerce brands, SaaS startups, coaches, and more scale revenue with Meta Ads, Social Media, and custom AI tools."/>
+  <link rel="canonical" href="https://signal-digital.netlify.app/work.html"/>
+  <meta property="og:title" content="Our Work — Signal Digital Case Studies"/>
+  <meta property="og:description" content="Real results across e-commerce, SaaS, coaching, fitness, and more. See our case studies and live portfolio."/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* HERO */
+    .work-hero{padding:140px 6% 80px;background:var(--green);text-align:center;position:relative;overflow:hidden}
+    .work-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.1) 0%,transparent 70%);pointer-events:none}
+    .work-hero h1{color:#fff;margin-bottom:16px}
+    .work-hero p{color:rgba(255,255,255,.68);font-size:1.05rem;max-width:560px;margin:0 auto 32px;line-height:1.8}
+
+    /* RESULTS OVERVIEW */
+    #overview{background:var(--cream-dark);padding:60px 6%}
+    .overview-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+    .ov-stat{text-align:center;padding:28px 20px;border-right:1px solid var(--border)}
+    .ov-stat:last-child{border:none}
+    .ov-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--green);display:block}
+    .ov-lbl{font-size:.78rem;color:var(--light);margin-top:6px;font-weight:500}
+
+    /* FILTER TABS */
+    .filter-bar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:52px}
+    .filter-btn{padding:8px 20px;border-radius:100px;border:1.5px solid var(--border);background:var(--white);font-size:.82rem;font-weight:600;color:var(--mid);cursor:pointer;font-family:inherit;transition:all .2s}
+    .filter-btn:hover,.filter-btn.active{background:var(--green);border-color:var(--green);color:#fff}
+
+    /* CASE STUDIES */
+    #cases{background:var(--white);padding:96px 6%}
+    .cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+    .case-card{border:1px solid var(--border);border-radius:20px;overflow:hidden;background:var(--cream);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+    .case-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+    .case-card.hidden{display:none}
+    .case-header{background:var(--green);padding:32px 32px 28px;position:relative;overflow:hidden}
+    .case-header::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:rgba(201,168,76,.12);border-radius:50%}
+    .case-industry{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:100px;margin-bottom:14px}
+    .case-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.25}
+    .case-subtitle{font-size:.82rem;color:rgba(255,255,255,.6)}
+    .case-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:24px 32px;background:var(--white);border-bottom:1px solid var(--border)}
+    .case-metric{text-align:center}
+    .case-metric-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--green);display:block}
+    .case-metric-lbl{font-size:.68rem;color:var(--light);margin-top:3px;font-weight:500}
+    .case-body{padding:24px 32px 28px;flex:1;display:flex;flex-direction:column}
+    .case-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+    .case-tag{background:rgba(27,58,45,.07);color:var(--green);font-size:.7rem;font-weight:600;padding:3px 9px;border-radius:100px}
+    .case-challenge{margin-bottom:14px}
+    .case-challenge-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--coral);margin-bottom:6px}
+    .case-challenge p,.case-result p{font-size:.87rem;color:var(--mid);line-height:1.72}
+    .case-result{margin-bottom:20px}
+    .case-result-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-light);margin-bottom:6px}
+    .case-footer{margin-top:auto;padding-top:16px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .case-market{font-size:.78rem;color:var(--light);display:flex;align-items:center;gap:6px}
+    .case-market-dot{width:5px;height:5px;background:var(--green-light);border-radius:50%}
+    .case-services{display:flex;gap:6px;flex-wrap:wrap}
+    .case-service-badge{background:var(--green);color:#fff;font-size:.7rem;font-weight:600;padding:3px 9px;border-radius:100px}
+
+    /* LIVE PORTFOLIO */
+    #live-portfolio{background:var(--green);padding:96px 6%}
+    .port-feature{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .port-browser{background:var(--cream);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg)}
+    .browser-bar{background:#e8e3db;padding:11px 14px;display:flex;gap:6px;align-items:center}
+    .bdot{width:10px;height:10px;border-radius:50%}
+    .bdot.r{background:#FF5F57}.bdot.y{background:#FFBD2E}.bdot.g{background:#28CA41}
+    .browser-url{flex:1;background:rgba(255,255,255,.5);border-radius:4px;padding:4px 10px;font-size:.7rem;color:var(--light);margin-left:8px}
+    .browser-body{padding:28px}
+    .bb-headline{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--green);margin-bottom:6px}
+    .bb-sub{font-size:.78rem;color:var(--light);margin-bottom:20px}
+    .bb-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+    .bb-card{background:var(--white);border-radius:9px;padding:12px;border:1px solid var(--border)}
+    .bb-clabel{font-size:.6rem;color:var(--light);font-weight:500;margin-bottom:3px}
+    .bb-val{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--green)}
+    .bb-btn{background:var(--coral);color:#fff;text-align:center;padding:9px;border-radius:7px;font-size:.78rem;font-weight:600}
+    .port-info{color:#fff}
+    .port-info h3{font-size:1.7rem;color:#fff;margin-bottom:14px}
+    .port-info p{font-size:.94rem;color:rgba(255,255,255,.68);line-height:1.82;margin-bottom:26px}
+    .port-stack{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px}
+    .port-stack-item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 16px}
+    .port-stack-label{font-size:.68rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+    .port-stack-val{font-size:.85rem;color:rgba(255,255,255,.85);font-weight:500}
+    .port-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+    /* TESTIMONIALS */
+    #testimonials{background:var(--cream);padding:96px 6%}
+    .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .test-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:32px;transition:transform .2s,box-shadow .2s}
+    .test-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+    .test-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(27,58,45,.06);color:var(--green);font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:100px;margin-bottom:12px}
+    .stars{color:var(--gold);font-size:.95rem;letter-spacing:2px;margin-bottom:14px}
+    .test-card blockquote{font-size:.9rem;color:var(--mid);line-height:1.78;font-style:italic;margin-bottom:22px}
+    .test-author{display:flex;align-items:center;gap:11px}
+    .avatar{width:42px;height:42px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;color:var(--gold);font-size:.92rem;flex-shrink:0}
+    .author-name{font-weight:600;font-size:.87rem;color:var(--green)}
+    .author-biz{font-size:.74rem;color:var(--light)}
+
+    /* CTA */
+    #work-cta{background:var(--white);padding:96px 6%}
+    .cta-center{text-align:center;max-width:620px;margin:0 auto}
+    .cta-center h2{margin-bottom:16px}
+    .cta-center p{font-size:1rem;color:var(--mid);margin-bottom:36px;line-height:1.75}
+    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+    @media(max-width:1024px){
+      .overview-inner{grid-template-columns:repeat(3,1fr)}
+      .ov-stat:nth-child(3){border:none}
+      .ov-stat:nth-child(4){border-right:1px solid var(--border)}
+    }
+    @media(max-width:768px){
+      .overview-inner{grid-template-columns:repeat(2,1fr)}
+      .ov-stat{border-right:none;border-bottom:1px solid var(--border)}
+      .ov-stat:nth-child(even){border-right:none}
+      .cases-grid{grid-template-columns:1fr}
+      .port-feature{grid-template-columns:1fr;gap:40px}
+      .test-grid{grid-template-columns:1fr}
+      .cta-actions{flex-direction:column;align-items:center}
+    }
+    @media(max-width:480px){.overview-inner{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="logo"><div class="logo-mark"><svg viewBox="0 0 20 20"><path d="M10 2L3 7v6l7 5 7-5V7z"/></svg></div><span class="logo-text">signal.</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="work.html" class="active">Our Work</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+  </ul>
+  <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-menu" id="mob">
+  <a href="about.html" onclick="closeMob()">About</a>
+  <a href="services.html" onclick="closeMob()">Services</a>
+  <a href="work.html" onclick="closeMob()">Our Work</a>
+  <a href="index.html#pricing" onclick="closeMob()">Pricing</a>
+  <a href="index.html#faq" onclick="closeMob()">FAQ</a>
+  <a href="contact.html" onclick="closeMob()">Get Started →</a>
+</div>
+<a id="wa-btn" href="https://wa.me/8801XXXXXXXXX?text=Hi%20Signal%20Digital" target="_blank" rel="noopener" aria-label="WhatsApp"><div id="wa-tooltip">Chat on WhatsApp</div><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2.002C6.49 2.002 2 6.492 2 12.052c0 1.867.487 3.62 1.332 5.145L2 22l4.937-1.295a10.01 10.01 0 004.78 1.216h.004c5.557 0 10.046-4.49 10.046-10.05 0-5.56-4.49-10.87-10.717-10.869zm.003 18.381h-.003a8.32 8.32 0 01-4.237-1.16l-.304-.18-3.148.826.841-3.07-.198-.315a8.322 8.322 0 01-1.277-4.432c0-4.6 3.745-8.344 8.35-8.344 2.23 0 4.323.87 5.897 2.45a8.285 8.285 0 012.44 5.9c-.003 4.6-3.748 8.325-8.361 8.325z"/></svg></a>
+<button id="scrollTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20"><path d="M10 4l6 7H4z"/></svg></button>
+
+<!-- HERO -->
+<section class="work-hero">
+  <div class="eyebrow gold">Our Work</div>
+  <h1>Real Businesses. Real Results.</h1>
+  <p>We don't believe in vague promises. Every case study below is built from an actual client engagement — with real numbers and real outcomes.</p>
+  <a href="contact.html" class="btn btn-coral">Get Results Like These →</a>
+</section>
+
+<!-- OVERVIEW NUMBERS -->
+<section id="overview">
+  <div class="overview-inner">
+    <div class="ov-stat fade"><span class="ov-num">50+</span><div class="ov-lbl">Clients Served</div></div>
+    <div class="ov-stat fade"><span class="ov-num">$284K+</span><div class="ov-lbl">Revenue Generated Monthly</div></div>
+    <div class="ov-stat fade"><span class="ov-num">3.8x</span><div class="ov-lbl">Average ROAS</div></div>
+    <div class="ov-stat fade"><span class="ov-num">10+</span><div class="ov-lbl">Industries Scaled</div></div>
+    <div class="ov-stat fade"><span class="ov-num">4</span><div class="ov-lbl">Global Markets</div></div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">Case Studies</div>
+      <h2>How We've Helped Businesses Grow</h2>
+      <p>Filter by industry to see results most relevant to your business.</p>
+    </div>
+    <div class="filter-bar fade">
+      <button class="filter-btn active" onclick="filterCases('all',this)">All Industries</button>
+      <button class="filter-btn" onclick="filterCases('ecommerce',this)">E-commerce</button>
+      <button class="filter-btn" onclick="filterCases('saas',this)">SaaS & Tech</button>
+      <button class="filter-btn" onclick="filterCases('coaching',this)">Coaching</button>
+      <button class="filter-btn" onclick="filterCases('fitness',this)">Fitness & Wellness</button>
+      <button class="filter-btn" onclick="filterCases('local',this)">Local Services</button>
+    </div>
+    <div class="cases-grid" id="casesGrid">
+
+      <!-- CASE 1: E-COMMERCE -->
+      <div class="case-card fade" data-industry="ecommerce">
+        <div class="case-header">
+          <div class="case-industry">E-commerce</div>
+          <div class="case-title">Fashion Retailer Scales from $8K to $42K Monthly Revenue</div>
+          <div class="case-subtitle">Meta Ads Campaign Restructure — US Market</div>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="case-metric-num">340%</span><div class="case-metric-lbl">ROAS</div></div>
+          <div class="case-metric"><span class="case-metric-num">2.8x</span><div class="case-metric-lbl">Lower CPA</div></div>
+          <div class="case-metric"><span class="case-metric-num">$42K</span><div class="case-metric-lbl">Monthly Revenue</div></div>
+        </div>
+        <div class="case-body">
+          <div class="case-tags"><span class="case-tag">Meta Ads</span><span class="case-tag">Retargeting</span><span class="case-tag">Lookalike Audiences</span></div>
+          <div class="case-challenge">
+            <div class="case-challenge-label">The Challenge</div>
+            <p>The client had been running Meta Ads in-house for 6 months with inconsistent results — $8K/month revenue, no clear funnel structure, and a ROAS of 1.2x on a tight $2K/month ad budget.</p>
+          </div>
+          <div class="case-result">
+            <div class="case-result-label">What We Did</div>
+            <p>Rebuilt the entire funnel architecture: cold audience campaigns targeting interest and behavioral lookalikes, mid-funnel video engagement campaigns, and a tight retargeting layer for cart abandoners and product viewers. Refreshed creatives every 3 weeks to prevent fatigue. Scaled budget incrementally as ROAS improved.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-market"><div class="case-market-dot"></div>New York, USA · 90 days</div>
+            <div class="case-services"><span class="case-service-badge">Meta Ads</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 2: SAAS -->
+      <div class="case-card fade" data-industry="saas">
+        <div class="case-header">
+          <div class="case-industry">SaaS & Tech</div>
+          <div class="case-title">Productivity SaaS Drives 156 Trial Signups/Month at Scale</div>
+          <div class="case-subtitle">Meta Ads + Social Media — UK Market</div>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="case-metric-num">156</span><div class="case-metric-lbl">Signups/Month</div></div>
+          <div class="case-metric"><span class="case-metric-num">34%</span><div class="case-metric-lbl">Trial to Paid</div></div>
+          <div class="case-metric"><span class="case-metric-num">$18K</span><div class="case-metric-lbl">New MRR</div></div>
+        </div>
+        <div class="case-body">
+          <div class="case-tags"><span class="case-tag">Meta Ads</span><span class="case-tag">Social Media</span><span class="case-tag">ABM Targeting</span></div>
+          <div class="case-challenge">
+            <div class="case-challenge-label">The Challenge</div>
+            <p>A remote team productivity tool with strong product-market fit but poor top-of-funnel. Previous agency used generic B2C targeting for a B2B product — wasted budget, low-quality leads, high churn on trials.</p>
+          </div>
+          <div class="case-result">
+            <div class="case-result-label">What We Did</div>
+            <p>Rebuilt targeting around job title and company size parameters (ABM-style within Meta's options). Created value-first ad creative showing the product solving real remote work problems. Paired ads with a consistent LinkedIn and Instagram content cadence showing customer wins and product tips — reducing ad-to-conversion friction dramatically.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-market"><div class="case-market-dot"></div>London, UK · 4 months</div>
+            <div class="case-services"><span class="case-service-badge">Meta Ads</span><span class="case-service-badge">Social Media</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 3: COACHING -->
+      <div class="case-card fade" data-industry="coaching">
+        <div class="case-header">
+          <div class="case-industry">Coaching</div>
+          <div class="case-title">Business Coach Fills High-Ticket Program with 12 New Clients</div>
+          <div class="case-subtitle">Meta Ads + AI Lead Magnet — AU Market</div>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="case-metric-num">12</span><div class="case-metric-lbl">New Clients</div></div>
+          <div class="case-metric"><span class="case-metric-num">$5K</span><div class="case-metric-lbl">Avg Client Value</div></div>
+          <div class="case-metric"><span class="case-metric-num">$60K</span><div class="case-metric-lbl">New Revenue</div></div>
+        </div>
+        <div class="case-body">
+          <div class="case-tags"><span class="case-tag">Meta Ads</span><span class="case-tag">AI Lead Magnet</span><span class="case-tag">Retargeting</span></div>
+          <div class="case-challenge">
+            <div class="case-challenge-label">The Challenge</div>
+            <p>A business coaching practice with excellent client results but no systematic lead generation. Relied entirely on referrals — wanted to fill a $5K/client group coaching program without cold calling or events.</p>
+          </div>
+          <div class="case-result">
+            <div class="case-result-label">What We Did</div>
+            <p>Built a custom ROI calculator lead magnet showing business owners their revenue potential — capturing qualified leads who self-select as high-intent. Ran Meta Ads driving traffic to the tool. Retargeted calculator completions with testimonial video ads and direct application CTAs. 12 enrolled clients in the first cohort.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-market"><div class="case-market-dot"></div>Sydney, AU · 60 days</div>
+            <div class="case-services"><span class="case-service-badge">Meta Ads</span><span class="case-service-badge">AI Tool</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 4: FITNESS -->
+      <div class="case-card fade" data-industry="fitness">
+        <div class="case-header">
+          <div class="case-industry">Fitness & Wellness</div>
+          <div class="case-title">Online Fitness Coach Grows to 2,400 Instagram Followers & 45 Paying Members</div>
+          <div class="case-subtitle">Social Media Management — UK Market</div>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="case-metric-num">2.4K</span><div class="case-metric-lbl">New Followers</div></div>
+          <div class="case-metric"><span class="case-metric-num">45</span><div class="case-metric-lbl">Paying Members</div></div>
+          <div class="case-metric"><span class="case-metric-num">3.1x</span><div class="case-metric-lbl">Engagement Rate</div></div>
+        </div>
+        <div class="case-body">
+          <div class="case-tags"><span class="case-tag">Social Media</span><span class="case-tag">Instagram</span><span class="case-tag">Content Strategy</span></div>
+          <div class="case-challenge">
+            <div class="case-challenge-label">The Challenge</div>
+            <p>An online fitness coach with great expertise but an inconsistent posting schedule and generic content — 340 followers, low engagement, and zero clients acquired through social media in 8 months.</p>
+          </div>
+          <div class="case-result">
+            <div class="case-result-label">What We Did</div>
+            <p>Developed a 3-post/week content strategy built around transformation stories, workout breakdowns, and nutrition myth-busting. Implemented a consistent visual identity and tone of voice. Added community management to convert engaged followers into DM conversations. Within 3 months, follower count grew from 340 to 2,740 and 45 followers converted to paying online coaching members.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-market"><div class="case-market-dot"></div>Manchester, UK · 3 months</div>
+            <div class="case-services"><span class="case-service-badge">Social Media</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 5: LOCAL -->
+      <div class="case-card fade" data-industry="local">
+        <div class="case-header">
+          <div class="case-industry">Local Services</div>
+          <div class="case-title">Home Renovation Company Generates 38 Qualified Leads in 30 Days</div>
+          <div class="case-subtitle">Meta Ads Local Campaign — US Market</div>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="case-metric-num">38</span><div class="case-metric-lbl">Qualified Leads</div></div>
+          <div class="case-metric"><span class="case-metric-num">$41</span><div class="case-metric-lbl">Cost Per Lead</div></div>
+          <div class="case-metric"><span class="case-metric-num">9</span><div class="case-metric-lbl">Jobs Booked</div></div>
+        </div>
+        <div class="case-body">
+          <div class="case-tags"><span class="case-tag">Meta Ads</span><span class="case-tag">Local Targeting</span><span class="case-tag">Lead Generation</span></div>
+          <div class="case-challenge">
+            <div class="case-challenge-label">The Challenge</div>
+            <p>A home renovation company in Texas spending $800/month on Google Ads with declining returns. Average cost-per-lead had climbed to $140 with low-quality inquiries from tire-kickers. Needed a better system.</p>
+          </div>
+          <div class="case-result">
+            <div class="case-result-label">What We Did</div>
+            <p>Moved budget to Meta Ads with a before/after creative strategy showing completed renovation projects. Geo-targeted ZIP codes within 30 miles of the business. Used an Instant Form with qualifying questions to filter out low-intent leads before they reached the client's phone. Delivered 38 qualified leads in 30 days at $41 each — a 66% reduction in CPL.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-market"><div class="case-market-dot"></div>Texas, USA · 30 days</div>
+            <div class="case-services"><span class="case-service-badge">Meta Ads</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 6: ECOMMERCE -->
+      <div class="case-card fade" data-industry="ecommerce">
+        <div class="case-header">
+          <div class="case-industry">E-commerce</div>
+          <div class="case-title">Supplement Brand Reduces CPA by 52% While Doubling Revenue</div>
+          <div class="case-subtitle">Meta Ads Full Funnel — AU Market</div>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="case-metric-num">52%</span><div class="case-metric-lbl">CPA Reduction</div></div>
+          <div class="case-metric"><span class="case-metric-num">4.6x</span><div class="case-metric-lbl">ROAS</div></div>
+          <div class="case-metric"><span class="case-metric-num">2x</span><div class="case-metric-lbl">Revenue Growth</div></div>
+        </div>
+        <div class="case-body">
+          <div class="case-tags"><span class="case-tag">Meta Ads</span><span class="case-tag">Creative Testing</span><span class="case-tag">Full Funnel</span></div>
+          <div class="case-challenge">
+            <div class="case-challenge-label">The Challenge</div>
+            <p>An Australian health supplement brand with a proven product but stagnant growth. Ads were profitable but not scalable — creative had fatigued, and scaling budget led to rapid ROAS decline.</p>
+          </div>
+          <div class="case-result">
+            <div class="case-result-label">What We Did</div>
+            <p>Implemented a systematic creative testing framework: 3 new ad concepts launched per week with clear hypotheses. Introduced UGC-style creatives alongside polished product ads. Built a mid-funnel layer for engaged audiences with educational content before the purchase CTA. Scaled from $3K to $12K/month ad spend while improving ROAS from 2.1x to 4.6x.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-market"><div class="case-market-dot"></div>Melbourne, AU · 5 months</div>
+            <div class="case-services"><span class="case-service-badge">Meta Ads</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LIVE PORTFOLIO -->
+<section id="live-portfolio">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow gold">Live Portfolio</div>
+      <h2 style="color:#fff">AI-Powered Lead Magnet — Built & Deployed</h2>
+      <p class="dim">Not just campaign management — we build tools that generate leads on autopilot. Here's a live example.</p>
+    </div>
+    <div class="port-feature fade">
+      <div class="port-browser">
+        <div class="browser-bar">
+          <div class="bdot r"></div><div class="bdot y"></div><div class="bdot g"></div>
+          <div class="browser-url">signal-roi-calculator.netlify.app</div>
+        </div>
+        <div class="browser-body">
+          <div class="bb-headline">Know what your best customers are worth.</div>
+          <div class="bb-sub">Revenue, Made Visible — Signal Digital Free Tool</div>
+          <div class="bb-cards">
+            <div class="bb-card"><div class="bb-clabel">Monthly Revenue</div><div class="bb-val">$12,400</div></div>
+            <div class="bb-card"><div class="bb-clabel">Annual Revenue</div><div class="bb-val">$148,800</div></div>
+            <div class="bb-card"><div class="bb-clabel">Lifetime Value</div><div class="bb-val">$37,200</div></div>
+          </div>
+          <div class="bb-btn">Get My Full Revenue Analysis →</div>
+        </div>
+      </div>
+      <div class="port-info">
+        <h3>Revenue ROI Calculator</h3>
+        <p>A fully functional AI-powered lead magnet built from scratch. Works universally for any business or industry. Visitors enter their numbers and instantly see their revenue potential — then submit their details to get the full analysis.</p>
+        <div class="port-stack">
+          <div class="port-stack-item"><div class="port-stack-label">Frontend</div><div class="port-stack-val">React + TypeScript + Tailwind CSS</div></div>
+          <div class="port-stack-item"><div class="port-stack-label">Build Tool</div><div class="port-stack-val">Vite 7.3.6</div></div>
+          <div class="port-stack-item"><div class="port-stack-label">Email Automation</div><div class="port-stack-val">EmailJS (lead capture + auto-reply)</div></div>
+          <div class="port-stack-item"><div class="port-stack-label">Deployment</div><div class="port-stack-val">Netlify (production CDN)</div></div>
+        </div>
+        <div class="port-btns">
+          <a href="https://signal-roi-calculator.netlify.app" target="_blank" rel="noopener" class="btn btn-gold">View Live Tool →</a>
+          <a href="https://github.com/rezwanahmed1050-lab/ai-roi-calculator" target="_blank" rel="noopener" class="btn btn-ghost">View GitHub Repo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">What Clients Say</div>
+      <h2>In Their Own Words</h2>
+      <p>Unedited feedback from clients across different industries and markets.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card fade">
+        <div class="test-badge">E-commerce · USA</div>
+        <div class="stars">★★★★★</div>
+        <blockquote>"Signal Digital transformed our Meta Ads completely. We went from barely profitable campaigns to a 340% ROAS in 90 days. The reporting is transparent, the communication is fast, and the results speak for themselves."</blockquote>
+        <div class="test-author"><div class="avatar">S</div><div><div class="author-name">Sarah T.</div><div class="author-biz">Fashion Brand, New York</div></div></div>
+      </div>
+      <div class="test-card fade">
+        <div class="test-badge">SaaS · UK</div>
+        <div class="stars">★★★★★</div>
+        <blockquote>"We've hired three different agencies in two years. Signal Digital is the first one that actually took time to understand our product before running a single ad. 156 qualified signups in month one was something we'd never achieved before."</blockquote>
+        <div class="test-author"><div class="avatar">J</div><div><div class="author-name">James M.</div><div class="author-biz">Productivity SaaS, London</div></div></div>
+      </div>
+      <div class="test-card fade">
+        <div class="test-badge">Coaching · AU</div>
+        <div class="stars">★★★★★</div>
+        <blockquote>"The ROI calculator they built for my coaching business was a game-changer. It captures 20+ qualified leads every week without me lifting a finger. Combined with the Meta Ads retargeting, I filled my entire coaching cohort in 60 days."</blockquote>
+        <div class="test-author"><div class="avatar">A</div><div><div class="author-name">Dr. Amira L.</div><div class="author-biz">Business Coach, Sydney</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="work-cta">
+  <div class="wrap">
+    <div class="cta-center fade">
+      <div class="eyebrow">Your Turn</div>
+      <h2>Ready to Be the Next Case Study?</h2>
+      <p>Every client you've seen on this page started with a free 30-minute strategy call. No pitch, no pressure — just an honest conversation about what's possible for your business.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-coral btn-lg">Schedule Free Strategy Call →</a>
+        <a href="services.html" class="btn btn-outline btn-lg">Explore Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-top">
+      <div><div class="footer-brand"><div class="fbrand-mark"><svg viewBox="0 0 20 20"><path d="M10 2L3 7v6l7 5 7-5V7z" fill="currentColor"/></svg></div><span class="fbrand-text">signal.</span></div><p class="footer-tagline">Revenue, Made Visible.<br/>AI-powered digital marketing for businesses across all industries.</p><div class="fsocials"><a href="https://linkedin.com/in/shakib-rezwan" target="_blank" rel="noopener" class="fsocial" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="https://github.com/rezwanahmed1050-lab" target="_blank" rel="noopener" class="fsocial" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg></a><a href="mailto:rezwanahmed1050@gmail.com" class="fsocial" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a></div></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#meta-ads">Meta Ads Management</a></li><li><a href="services.html#social-media">Social Media Management</a></li><li><a href="services.html#ai-tools">Custom AI Tools</a></li><li><a href="https://signal-roi-calculator.netlify.app" target="_blank">Free ROI Calculator</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="work.html">Our Work</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Free Strategy Call</a></li><li><a href="mailto:rezwanahmed1050@gmail.com">Send Email</a></li><li><a href="https://wa.me/8801XXXXXXXXX" target="_blank">WhatsApp</a></li><li><a href="https://linkedin.com/in/shakib-rezwan" target="_blank">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Signal Digital. All rights reserved.</p><div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="privacy.html#terms">Terms of Service</a></div><p class="footer-markets">Serving: US · UK · EU · AU · Worldwide</p></div>
+  </div>
+</footer>
+<script src="shared.js"></script>
+<script>
+  function filterCases(industry, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.case-card').forEach(card => {
+      if (industry === 'all' || card.dataset.industry === industry) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+</script>
+</body>
+</html>

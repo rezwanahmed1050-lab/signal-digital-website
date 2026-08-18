@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Signal Digital — AI-Powered Digital Marketing Agency | Meta Ads & Social Media</title>
+  <meta name="description" content="Signal Digital is an AI-powered marketing agency specializing in Meta Ads, Social Media Management, and custom AI lead magnet tools. Serving US, UK, EU, and AU businesses across all industries."/>
+  <meta name="keywords" content="digital marketing agency, Meta ads management, social media management, AI marketing, Facebook ads, Instagram ads"/>
+  <link rel="canonical" href="https://signal-digital.netlify.app/"/>
+  <meta property="og:title" content="Signal Digital — Revenue, Made Visible"/>
+  <meta property="og:description" content="AI-powered Meta Ads, Social Media Management, and custom AI tools for businesses across all industries. US, UK, EU, AU markets."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://signal-digital.netlify.app/"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Signal Digital — AI-Powered Marketing Agency"/>
+  <meta name="twitter:description" content="Revenue, Made Visible. Meta Ads + Social Media + AI Tools for any industry."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MarketingAgency",
+    "name":"Signal Digital",
+    "description":"AI-powered digital marketing agency specializing in Meta Ads and Social Media Management",
+    "url":"https://signal-digital.netlify.app",
+    "email":"rezwanahmed1050@gmail.com",
+    "foundingDate":"2023",
+    "areaServed":["US","GB","EU","AU"],
+    "serviceType":["Meta Ads Management","Social Media Management","AI Marketing Tools"],
+    "slogan":"Revenue, Made Visible"
+  }
+  </script>
+  <style>
+    /* HERO */
+    #hero{min-height:100vh;display:flex;align-items:center;padding-top:70px;background:var(--cream);position:relative;overflow:hidden}
+    #hero::before{content:'';position:absolute;top:-180px;right:-180px;width:650px;height:650px;background:radial-gradient(circle,rgba(27,58,45,.05) 0%,transparent 68%);pointer-events:none}
+    #hero::after{content:'';position:absolute;bottom:-120px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.055) 0%,transparent 68%);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+    .hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(27,58,45,.08);color:var(--green);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:22px}
+    .hero-pill-dot{width:7px;height:7px;background:var(--gold);border-radius:50%;animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+    .hero-title{margin-bottom:10px}
+    .hero-title .static{display:block}
+    .ticker-wrap{display:inline-block;position:relative;min-width:300px;height:1.15em;vertical-align:bottom}
+    .ticker-item{position:absolute;left:0;top:0;color:var(--coral);white-space:nowrap;opacity:0;transition:opacity .5s ease,transform .5s ease;transform:translateY(8px);pointer-events:none;font-family:'Playfair Display',serif;font-weight:900;line-height:1.15}
+    .ticker-item.active{opacity:1;transform:translateY(0)}
+    .hero-sub{font-size:1.06rem;color:var(--mid);line-height:1.78;max-width:480px;margin:22px 0 36px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+    .hero-trust{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:5px;font-size:.79rem;color:var(--light);font-weight:500}
+    .trust-dot{width:5px;height:5px;background:var(--green-light);border-radius:50%}
+    .trust-sep{width:1px;height:14px;background:var(--border-dark)}
+    /* Hero right */
+    .hero-right{display:flex;flex-direction:column;gap:16px}
+    .hero-main-card{background:var(--green);border-radius:20px;padding:36px 32px;color:#fff;position:relative;overflow:hidden}
+    .hero-main-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:rgba(201,168,76,.12);border-radius:50%}
+    .card-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.5;margin-bottom:10px}
+    .card-big{font-family:'Playfair Display',serif;font-size:2.85rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px}
+    .card-sub{font-size:.83rem;opacity:.6;margin-bottom:22px}
+    .card-bar{height:4px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden}
+    .card-fill{height:100%;background:var(--gold);border-radius:2px;width:0;transition:width 2.4s ease}
+    .mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .mini-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px 12px;transition:transform .2s,box-shadow .2s}
+    .mini-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+    .mini-num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--green)}
+    .mini-lbl{font-size:.7rem;color:var(--light);margin-top:3px;line-height:1.3}
+    /* INDUSTRIES STRIP */
+    #ind-strip{background:var(--green);padding:32px 6%}
+    .ind-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .ind-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.38);white-space:nowrap}
+    .ind-div{width:1px;height:24px;background:rgba(255,255,255,.1)}
+    .ind-tags{display:flex;gap:8px;flex-wrap:wrap}
+    .ind-tag{padding:5px 13px;border-radius:100px;border:1px solid rgba(255,255,255,.14);font-size:.77rem;font-weight:500;color:rgba(255,255,255,.68);transition:all .2s}
+    .ind-tag:hover{background:rgba(255,255,255,.08);color:#fff}
+    /* ABOUT */
+    #about{background:var(--white)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .about-text p{font-size:.97rem;color:var(--mid);line-height:1.82;margin-bottom:18px}
+    .about-points{margin-top:28px;display:flex;flex-direction:column;gap:16px}
+    .apoint{display:flex;gap:14px;align-items:flex-start}
+    .apoint-icon{width:40px;height:40px;background:rgba(27,58,45,.07);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .apoint-icon svg{width:18px;height:18px;fill:var(--green)}
+    .apoint strong{display:block;font-size:.92rem;color:var(--green);margin-bottom:3px}
+    .apoint span{font-size:.83rem;color:var(--light)}
+    .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .stat-card{background:var(--cream);border:1px solid var(--border);border-radius:16px;padding:28px 22px;text-align:center;transition:transform .2s,box-shadow .2s}
+    .stat-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+    .stat-num{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:900;color:var(--green);display:block}
+    .stat-lbl{font-size:.78rem;color:var(--light);margin-top:6px;font-weight:500}
+    .stat-note{font-size:.68rem;color:var(--gold);margin-top:4px;font-weight:600}
+    /* SERVICES */
+    #services{background:var(--cream)}
+    .svcs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .svc-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:38px 30px;transition:all .3s;position:relative;overflow:hidden}
+    .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--coral);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+    .svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+    .svc-card:hover::before{transform:scaleX(1)}
+    .svc-icon{width:52px;height:52px;background:rgba(27,58,45,.07);border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+    .svc-icon svg{width:24px;height:24px;fill:var(--green)}
+    .svc-card h3{margin-bottom:10px}
+    .svc-card p{font-size:.87rem;color:var(--mid);line-height:1.72;margin-bottom:22px}
+    .svc-list{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:26px}
+    .svc-list li{display:flex;align-items:center;gap:8px;font-size:.83rem;color:var(--mid)}
+    .svc-list li::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0}
+    .svc-link{color:var(--coral);font-weight:600;font-size:.85rem;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:gap .2s}
+    .svc-link:hover{gap:9px}
+    /* RESULTS */
+    #results{background:var(--white)}
+    .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .result-card{border:1px solid var(--border);border-radius:20px;padding:32px;background:var(--cream);transition:all .3s;position:relative;overflow:hidden}
+    .result-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--coral),var(--gold))}
+    .result-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+    .result-industry{display:inline-flex;align-items:center;gap:6px;background:rgba(27,58,45,.06);color:var(--green);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:100px;margin-bottom:16px}
+    .result-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+    .result-metric{background:var(--white);border-radius:10px;padding:12px;text-align:center;border:1px solid var(--border)}
+    .result-metric-num{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:900;color:var(--green)}
+    .result-metric-lbl{font-size:.65rem;color:var(--light);margin-top:3px;font-weight:500}
+    .result-card h3{font-size:1rem;margin-bottom:8px}
+    .result-card p{font-size:.84rem;color:var(--mid);line-height:1.7}
+    /* PORTFOLIO */
+    #portfolio{background:var(--green)}
+    .port-feature{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .port-browser{background:var(--cream);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg)}
+    .browser-bar{background:#e8e3db;padding:11px 14px;display:flex;gap:6px;align-items:center}
+    .bdot{width:10px;height:10px;border-radius:50%}
+    .bdot.r{background:#FF5F57}.bdot.y{background:#FFBD2E}.bdot.g{background:#28CA41}
+    .browser-url{flex:1;background:rgba(255,255,255,.5);border-radius:4px;padding:4px 10px;font-size:.7rem;color:var(--light);margin-left:8px}
+    .browser-body{padding:28px}
+    .bb-headline{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--green);margin-bottom:6px}
+    .bb-sub{font-size:.8rem;color:var(--light);margin-bottom:20px}
+    .bb-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+    .bb-card{background:var(--white);border-radius:9px;padding:12px;border:1px solid var(--border)}
+    .bb-clabel{font-size:.6rem;color:var(--light);font-weight:500;margin-bottom:3px}
+    .bb-val{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--green)}
+    .bb-btn{background:var(--coral);color:#fff;text-align:center;padding:9px;border-radius:7px;font-size:.78rem;font-weight:600}
+    .port-info{color:#fff}
+    .port-info h3{font-size:1.75rem;color:#fff;margin-bottom:14px}
+    .port-info p{font-size:.94rem;color:rgba(255,255,255,.68);line-height:1.82;margin-bottom:26px}
+    .port-results{display:flex;flex-direction:column;gap:11px;margin-bottom:30px}
+    .presult{display:flex;align-items:center;gap:11px;font-size:.85rem;color:rgba(255,255,255,.78)}
+    .pcheck{width:22px;height:22px;background:rgba(201,168,76,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .pcheck svg{width:11px;height:11px}
+    .port-btns{display:flex;gap:12px;flex-wrap:wrap}
+    /* INDUSTRIES GRID */
+    .ind-served{margin-top:72px}
+    .ind-served-title{color:rgba(255,255,255,.8);font-family:'Playfair Display',serif;font-size:1.1rem;text-align:center;margin-bottom:28px;font-weight:600}
+    .ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .ind-item{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px 16px;text-align:center;transition:all .25s}
+    .ind-item:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);transform:translateY(-3px)}
+    .ind-svg{width:44px;height:44px;margin:0 auto 12px;background:rgba(201,168,76,.15);border-radius:12px;display:flex;align-items:center;justify-content:center}
+    .ind-svg svg{width:24px;height:24px;fill:var(--gold)}
+    .ind-item-name{font-size:.82rem;color:rgba(255,255,255,.75);font-weight:500;line-height:1.35}
+    /* PROCESS */
+    #process{background:var(--cream)}
+    .process-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;position:relative}
+    .process-row::before{content:'';position:absolute;top:31px;left:calc(12.5% + 12px);right:calc(12.5% + 12px);height:2px;background:var(--border-dark);z-index:0}
+    .pstep{text-align:center;padding:0 14px;position:relative}
+    .pnum{width:62px;height:62px;border-radius:50%;background:var(--white);border:2px solid var(--border-dark);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;position:relative;z-index:1;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--green);transition:all .3s;box-shadow:var(--shadow-sm)}
+    .pstep:hover .pnum{background:var(--green);border-color:var(--green);color:var(--gold);box-shadow:var(--shadow-md)}
+    .pstep h3{font-size:1rem;margin-bottom:8px}
+    .pstep p{font-size:.82rem;color:var(--light);line-height:1.65}
+    .ptimeline{font-size:.72rem;color:var(--coral);font-weight:600;margin-top:8px}
+    /* CURRENCY + PRICING */
+    .currency-bar{background:var(--green);padding:12px 6%}
+    .cur-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .cur-label{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+    .cur-btns{display:flex;gap:6px}
+    .cur-btn{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:.78rem;font-weight:600;padding:5px 14px;border-radius:100px;cursor:pointer;font-family:inherit;transition:all .2s}
+    .cur-btn.active{background:var(--gold);border-color:var(--gold);color:var(--green)}
+    .cur-btn:hover:not(.active){background:rgba(255,255,255,.12);color:#fff}
+    .cur-note{font-size:.72rem;color:rgba(255,255,255,.3);margin-left:auto}
+    #pricing{background:var(--white)}
+    .pricing-toggle{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:44px}
+    .tog-label{font-size:.88rem;font-weight:500;color:var(--mid)}
+    .tog-label.on{color:var(--green);font-weight:700}
+    .tog-sw{position:relative;width:48px;height:26px}
+    .tog-sw input{opacity:0;width:0;height:0}
+    .tog-track{position:absolute;inset:0;background:var(--border-dark);border-radius:100px;cursor:pointer;transition:.3s}
+    .tog-track::before{content:'';position:absolute;left:3px;top:3px;width:20px;height:20px;background:#fff;border-radius:50%;transition:.3s;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+    .tog-sw input:checked+.tog-track{background:var(--green)}
+    .tog-sw input:checked+.tog-track::before{transform:translateX(22px)}
+    .annual-badge{background:rgba(27,58,45,.08);color:var(--green);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:100px}
+    .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .price-card{background:var(--cream);border:2px solid var(--border);border-radius:20px;padding:38px 30px;transition:all .3s;position:relative}
+    .price-card.pop{background:var(--green);border-color:var(--green);transform:scale(1.04)}
+    .price-card:hover:not(.pop){border-color:var(--green-light);box-shadow:var(--shadow-md)}
+    .pop-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--green);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 16px;border-radius:100px;white-space:nowrap}
+    .price-tier{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-bottom:6px}
+    .pop .price-tier{color:rgba(255,255,255,.45)}
+    .price-card h3{font-size:1.3rem;margin-bottom:0}
+    .pop h3{color:#fff}
+    .price-row{display:flex;align-items:baseline;gap:3px;margin:18px 0 6px}
+    .p-cur{font-size:1.1rem;font-weight:600;color:var(--green)}
+    .pop .p-cur{color:var(--gold)}
+    .p-amt{font-family:'Playfair Display',serif;font-size:2.7rem;font-weight:900;color:var(--green);line-height:1}
+    .pop .p-amt{color:#fff}
+    .p-per{font-size:.82rem;color:var(--light)}
+    .pop .p-per{color:rgba(255,255,255,.42)}
+    .price-save{font-size:.74rem;color:var(--green-light);font-weight:600;margin-bottom:14px;min-height:18px;display:none}
+    .pop .price-save{color:var(--gold)}
+    .show-save .price-save{display:block}
+    .price-desc{font-size:.83rem;color:var(--mid);margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+    .pop .price-desc{color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.12)}
+    .price-feats{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:28px}
+    .price-feats li{display:flex;align-items:flex-start;gap:9px;font-size:.85rem;color:var(--mid)}
+    .pop .price-feats li{color:rgba(255,255,255,.78)}
+    .price-feats li::before{content:'✓';color:var(--green-light);font-weight:700;flex-shrink:0;line-height:1.4}
+    .pop .price-feats li::before{color:var(--gold)}
+    .price-btn{display:block;width:100%;text-align:center;padding:13px;border-radius:8px;font-weight:600;font-size:.88rem;text-decoration:none;transition:all .2s;cursor:pointer;font-family:inherit;border:none}
+    .pbtn-primary{background:var(--coral);color:#fff}
+    .pbtn-primary:hover{background:var(--coral-dark);transform:translateY(-1px)}
+    .pbtn-outline{background:transparent;color:var(--green);border:2px solid var(--border-dark)}
+    .pbtn-outline:hover{border-color:var(--green);background:rgba(27,58,45,.04)}
+    .price-note{text-align:center;margin-top:32px;font-size:.85rem;color:var(--light)}
+    .price-note a{color:var(--coral);font-weight:600;text-decoration:none}
+    .pay-methods{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;flex-wrap:wrap}
+    .pay-badge{background:var(--cream-dark);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:.72rem;font-weight:600;color:var(--mid)}
+    /* TESTIMONIALS */
+    #testimonials{background:var(--cream)}
+    .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .test-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:32px;transition:transform .2s,box-shadow .2s}
+    .test-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+    .test-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(27,58,45,.06);color:var(--green);font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:100px;margin-bottom:12px}
+    .stars{color:var(--gold);font-size:.9rem;letter-spacing:2px;margin-bottom:12px}
+    .test-card blockquote{font-size:.9rem;color:var(--mid);line-height:1.78;font-style:italic;margin-bottom:20px}
+    .test-author{display:flex;align-items:center;gap:11px}
+    .avatar{width:42px;height:42px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;color:var(--gold);font-size:.92rem;flex-shrink:0}
+    .author-name{font-weight:600;font-size:.87rem;color:var(--green)}
+    .author-biz{font-size:.74rem;color:var(--light)}
+    /* FAQ */
+    #faq{background:var(--white)}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .faq-item{background:var(--cream);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .2s}
+    .faq-item.open{border-color:var(--border-dark)}
+    .faq-q{width:100%;background:none;border:none;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;cursor:pointer;text-align:left;font-family:inherit;font-size:.89rem;font-weight:600;color:var(--green)}
+    .faq-icon{width:24px;height:24px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s,background .3s}
+    .faq-icon svg{width:12px;height:12px;fill:none;stroke:var(--green);stroke-width:2}
+    .faq-item.open .faq-icon{transform:rotate(45deg);background:var(--green)}
+    .faq-item.open .faq-icon svg{stroke:#fff}
+    .faq-body{max-height:0;overflow:hidden;transition:max-height .38s ease}
+    .faq-body p{padding:0 22px 20px;font-size:.84rem;color:var(--mid);line-height:1.78}
+    .faq-item.open .faq-body{max-height:300px}
+    /* CONTACT */
+    #contact{background:var(--green)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:72px;align-items:start}
+    .contact-info h2{color:#fff;margin-bottom:14px}
+    .contact-info>p{font-size:.96rem;color:rgba(255,255,255,.65);line-height:1.82;margin-bottom:28px}
+    .urgency-box{background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);border-radius:12px;padding:16px 20px;margin-bottom:28px}
+    .urgency-box p{font-size:.82rem;color:var(--gold-light);line-height:1.5;margin-bottom:0}
+    .urgency-box strong{color:var(--gold)}
+    .cdetails{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+    .cdetail{display:flex;align-items:center;gap:12px;font-size:.87rem;color:rgba(255,255,255,.7)}
+    .cdetail-icon{width:38px;height:38px;background:rgba(255,255,255,.07);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .cdetail-icon svg{width:17px;height:17px;fill:var(--gold)}
+    .social-links{display:flex;gap:10px}
+    .social-link{width:40px;height:40px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:9px;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .2s}
+    .social-link:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.3)}
+    .social-link svg{width:18px;height:18px;fill:rgba(255,255,255,.7)}
+    .cform{background:#fff;border-radius:20px;padding:38px;box-shadow:var(--shadow-lg)}
+    .cform-title{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--green);margin-bottom:5px}
+    .cform-sub{font-size:.81rem;color:var(--light);margin-bottom:24px}
+    /* RESPONSIVE OVERRIDES */
+    @media(max-width:1024px){
+      .svcs-grid{grid-template-columns:1fr 1fr}
+      .results-grid{grid-template-columns:1fr 1fr}
+      .price-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto}
+      .price-card.pop{transform:scale(1)}
+      .ind-grid{grid-template-columns:repeat(4,1fr)}
+      .mini-grid{grid-template-columns:repeat(2,1fr)}
+      .test-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:768px){
+      .hero-grid{grid-template-columns:1fr;gap:44px}
+      .hero-right{order:-1}
+      .about-grid{grid-template-columns:1fr;gap:44px}
+      .svcs-grid{grid-template-columns:1fr}
+      .results-grid{grid-template-columns:1fr}
+      .port-feature{grid-template-columns:1fr;gap:40px}
+      .process-row{grid-template-columns:1fr 1fr}
+      .process-row::before{display:none}
+      .test-grid{grid-template-columns:1fr}
+      .faq-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr;gap:44px}
+      .ind-grid{grid-template-columns:repeat(2,1fr)}
+      .hero-actions{flex-direction:column}
+      .hero-actions .btn{justify-content:center}
+    }
+    @media(max-width:480px){
+      .mini-grid{grid-template-columns:repeat(2,1fr)}
+      .stats-grid{grid-template-columns:1fr 1fr}
+      .ind-grid{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="logo">
+    <div class="logo-mark"><svg viewBox="0 0 20 20"><path d="M10 2L3 7v6l7 5 7-5V7z"/></svg></div>
+    <span class="logo-text">signal.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="work.html">Our Work</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+  </ul>
+  <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-menu" id="mob">
+  <a href="about.html" onclick="closeMob()">About</a>
+  <a href="services.html" onclick="closeMob()">Services</a>
+  <a href="work.html" onclick="closeMob()">Our Work</a>
+  <a href="index.html#pricing" onclick="closeMob()">Pricing</a>
+  <a href="index.html#faq" onclick="closeMob()">FAQ</a>
+  <a href="contact.html" onclick="closeMob()">Get Started →</a>
+</div>
+
+<!-- WHATSAPP -->
+<a id="wa-btn" href="https://wa.me/8801749224182?text=Hi%20Signal%20Digital%2C%20I%27d%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <div id="wa-tooltip">Chat on WhatsApp</div>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2.002C6.49 2.002 2 6.492 2 12.052c0 1.867.487 3.62 1.332 5.145L2 22l4.937-1.295a10.01 10.01 0 004.78 1.216h.004c5.557 0 10.046-4.49 10.046-10.05 0-5.56-4.49-10.87-10.717-10.869zm.003 18.381h-.003a8.32 8.32 0 01-4.237-1.16l-.304-.18-3.148.826.841-3.07-.198-.315a8.322 8.322 0 01-1.277-4.432c0-4.6 3.745-8.344 8.35-8.344 2.23 0 4.323.87 5.897 2.45a8.285 8.285 0 012.44 5.9c-.003 4.6-3.748 8.325-8.361 8.325z"/></svg>
+</a>
+
+<!-- SCROLL TOP -->
+<button id="scrollTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 20 20"><path d="M10 4l6 7H4z"/></svg>
+</button>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap hero-grid">
+    <div class="fade">
+      <div class="hero-pill"><div class="hero-pill-dot"></div>AI-Powered Digital Marketing</div>
+      <h1 class="hero-title">
+        <span class="static">Grow Any</span>
+        <span class="ticker-wrap" id="tickerWrap">
+          <span class="ticker-item active">E-commerce Brand</span>
+          <span class="ticker-item">SaaS Startup</span>
+          <span class="ticker-item">Coaching Business</span>
+          <span class="ticker-item">Local Service</span>
+          <span class="ticker-item">Real Estate Brand</span>
+        </span>
+        <span class="static">With Precision Marketing</span>
+      </h1>
+      <p class="hero-sub">Strategic Meta Ads, engaging social media, and custom AI tools designed to acquire customers and scale revenue — <em>any industry, any market.</em></p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-coral btn-lg">Schedule Free Strategy Call →</a>
+        <a href="work.html" class="btn btn-outline btn-lg">View Our Work</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><div class="trust-dot"></div>50+ Businesses Scaled</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item"><div class="trust-dot"></div>US · UK · EU · AU</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item"><div class="trust-dot"></div>Revenue, Made Visible</div>
+      </div>
+    </div>
+    <div class="hero-right fade">
+      <div class="hero-main-card">
+        <div class="card-label">Revenue Generated for Clients</div>
+        <div class="card-big" id="counter">$0</div>
+        <div class="card-sub">Tracked monthly across all active campaigns</div>
+        <div class="card-bar"><div class="card-fill" id="cfill"></div></div>
+      </div>
+      <div class="mini-grid">
+        <div class="mini-card"><div class="mini-num">3.8x</div><div class="mini-lbl">Avg ROAS</div></div>
+        <div class="mini-card"><div class="mini-num">48h</div><div class="mini-lbl">Launch Time</div></div>
+        <div class="mini-card"><div class="mini-num">24/7</div><div class="mini-lbl">AI Monitoring</div></div>
+        <div class="mini-card"><div class="mini-num">10+</div><div class="mini-lbl">Industries</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES STRIP -->
+<section id="ind-strip">
+  <div class="ind-inner">
+    <div class="ind-label">Industries We Serve</div>
+    <div class="ind-div"></div>
+    <div class="ind-tags">
+      <span class="ind-tag">E-commerce</span>
+      <span class="ind-tag">SaaS & Tech</span>
+      <span class="ind-tag">Coaching</span>
+      <span class="ind-tag">Fitness & Wellness</span>
+      <span class="ind-tag">Real Estate</span>
+      <span class="ind-tag">Beauty & Aesthetics</span>
+      <span class="ind-tag">Local Services</span>
+      <span class="ind-tag">B2B & Consulting</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SNIPPET -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text fade-left">
+        <div class="eyebrow">Who We Are</div>
+        <h2>AI-Powered Marketing Built for Business Growth</h2>
+        <p>Signal Digital is a 100% AI-powered solo marketing agency founded by Shakib Rezwan — a BBA Marketing graduate from Independent University Bangladesh, serving clients across the US, UK, Europe, and Australia.</p>
+        <p>We've scaled businesses across 10+ industries. While every vertical has unique challenges, the fundamentals are universal: strategic ads, authentic content, and relentless data-driven optimization.</p>
+        <div class="about-points">
+          <div class="apoint">
+            <div class="apoint-icon"><svg viewBox="0 0 20 20"><path d="M10 2C5.6 2 2 5.6 2 10s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm3.7 6.3l-4.5 4.5c-.4.4-1 .4-1.4 0L5.3 10.3c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0L8.5 10.7l3.8-3.8c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4z"/></svg></div>
+            <div><strong>Industry Agnostic Strategy</strong><span>We adapt to your market — not the other way around</span></div>
+          </div>
+          <div class="apoint">
+            <div class="apoint-icon"><svg viewBox="0 0 20 20"><path d="M10 2l2.4 5h5.3l-4.3 3.1 1.6 5.2L10 12.2l-5 3.1 1.6-5.2L2.3 7h5.3L10 2z"/></svg></div>
+            <div><strong>AI-Powered Efficiency</strong><span>Faster strategy, sharper targeting, smarter optimization</span></div>
+          </div>
+          <div class="apoint">
+            <div class="apoint-icon"><svg viewBox="0 0 20 20"><path d="M17 4H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-1 10H4V6h12v8z"/></svg></div>
+            <div><strong>Transparent Reporting</strong><span>Weekly updates, monthly reports — no surprises</span></div>
+          </div>
+        </div>
+        <div style="margin-top:28px"><a href="about.html" class="btn btn-outline">Meet the Founder →</a></div>
+      </div>
+      <div class="stats-grid fade-right">
+        <div class="stat-card"><span class="stat-num">50+</span><div class="stat-lbl">Businesses Scaled</div><div class="stat-note">Across 10+ industries</div></div>
+        <div class="stat-card"><span class="stat-num">3.8x</span><div class="stat-lbl">Average ROAS</div><div class="stat-note">Across active campaigns</div></div>
+        <div class="stat-card"><span class="stat-num">48h</span><div class="stat-lbl">Campaign Launch</div><div class="stat-note">Strategy to live</div></div>
+        <div class="stat-card"><span class="stat-num">4</span><div class="stat-lbl">Global Markets</div><div class="stat-note">US · UK · EU · AU</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID CTA -->
+<div class="cta-band">
+  <div class="cta-band-inner wrap">
+    <div class="cta-band-text">
+      <h3>Not sure if we're the right fit?</h3>
+      <p>Book a free 30-minute strategy call — no pitch, no pressure. Just honest advice.</p>
+    </div>
+    <a href="contact.html" class="btn btn-coral">Book Free Call →</a>
+  </div>
+</div>
+
+<!-- SERVICES SNIPPET -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">What We Do</div>
+      <h2>Services Built to Acquire Customers & Scale Revenue</h2>
+      <p>Every service is engineered with one outcome: bringing more qualified customers to your business.</p>
+    </div>
+    <div class="svcs-grid">
+      <div class="svc-card fade">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg></div>
+        <h3>Meta Ads Management</h3>
+        <p>Strategic Facebook & Instagram campaigns engineered to convert high-intent prospects into paying customers — across any industry.</p>
+        <ul class="svc-list">
+          <li>Campaign strategy & audience research</li>
+          <li>Ad creative direction & copywriting</li>
+          <li>Real-time optimization & A/B testing</li>
+          <li>Retargeting & lookalike audiences</li>
+          <li>Weekly performance reports</li>
+        </ul>
+        <a href="services.html#meta-ads" class="svc-link">Learn More →</a>
+      </div>
+      <div class="svc-card fade">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+        <h3>Social Media Management</h3>
+        <p>Build authority, trust, and community. Consistent, high-quality content that positions your brand as the obvious choice in your market.</p>
+        <ul class="svc-list">
+          <li>Content strategy & monthly calendar</li>
+          <li>Captions, hashtags & scheduling</li>
+          <li>Community management & DMs</li>
+          <li>Instagram, Facebook & TikTok</li>
+          <li>Monthly analytics & growth report</li>
+        </ul>
+        <a href="services.html#social-media" class="svc-link">Learn More →</a>
+      </div>
+      <div class="svc-card fade">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg></div>
+        <h3>Custom AI Tools & Lead Magnets</h3>
+        <p>Bespoke AI-powered tools that capture qualified prospects on autopilot — with automated email follow-up from first touch.</p>
+        <ul class="svc-list">
+          <li>ROI & revenue calculators</li>
+          <li>Interactive assessment tools</li>
+          <li>Automated email lead capture</li>
+          <li>Personalized auto-reply sequences</li>
+          <li>Works for any industry or niche</li>
+        </ul>
+        <a href="services.html#ai-tools" class="svc-link">See Live Demo →</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px"><a href="services.html" class="btn btn-outline">View All Services →</a></div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">Proven Results</div>
+      <h2>Real Numbers Across Real Industries</h2>
+      <p>A snapshot of results we've delivered across different verticals.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card fade">
+        <div class="result-industry">E-commerce</div>
+        <div class="result-metrics">
+          <div class="result-metric"><div class="result-metric-num">340%</div><div class="result-metric-lbl">ROAS</div></div>
+          <div class="result-metric"><div class="result-metric-num">2.8x</div><div class="result-metric-lbl">Lower CPA</div></div>
+          <div class="result-metric"><div class="result-metric-num">$42K</div><div class="result-metric-lbl">New Revenue</div></div>
+        </div>
+        <h3>Fashion Retailer — US Market</h3>
+        <p>Scaled from $8K to $42K/month in new customer revenue in 90 days through Meta ad funnel restructuring and lookalike audience expansion.</p>
+      </div>
+      <div class="result-card fade">
+        <div class="result-industry">SaaS</div>
+        <div class="result-metrics">
+          <div class="result-metric"><div class="result-metric-num">156</div><div class="result-metric-lbl">Signups/mo</div></div>
+          <div class="result-metric"><div class="result-metric-num">34%</div><div class="result-metric-lbl">Trial→Paid</div></div>
+          <div class="result-metric"><div class="result-metric-num">$18K</div><div class="result-metric-lbl">New MRR</div></div>
+        </div>
+        <h3>Productivity Tool — UK Market</h3>
+        <p>Drove 156 qualified free trial signups per month with a 34% trial-to-paid conversion using value-first messaging and ABM targeting.</p>
+      </div>
+      <div class="result-card fade">
+        <div class="result-industry">Coaching</div>
+        <div class="result-metrics">
+          <div class="result-metric"><div class="result-metric-num">12</div><div class="result-metric-lbl">New Clients</div></div>
+          <div class="result-metric"><div class="result-metric-num">$5K</div><div class="result-metric-lbl">Avg Value</div></div>
+          <div class="result-metric"><div class="result-metric-num">$60K</div><div class="result-metric-lbl">Revenue</div></div>
+        </div>
+        <h3>Business Coach — AU Market</h3>
+        <p>Filled a high-ticket coaching program with 12 new clients using social proof content, testimonial video ads, and retargeting funnels.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px"><a href="work.html" class="btn btn-outline">See All Case Studies →</a></div>
+  </div>
+</section>
+
+<!-- PORTFOLIO TOOL -->
+<section id="portfolio">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow gold">Featured Work</div>
+      <h2 style="color:#fff">Revenue ROI Calculator — Live Tool</h2>
+      <p class="dim">An AI-powered lead magnet we built from scratch — universally designed for any business.</p>
+    </div>
+    <div class="port-feature fade">
+      <div class="port-browser">
+        <div class="browser-bar">
+          <div class="bdot r"></div><div class="bdot y"></div><div class="bdot g"></div>
+          <div class="browser-url">signal-roi-calculator.netlify.app</div>
+        </div>
+        <div class="browser-body">
+          <div class="bb-headline">Know what your best customers are worth.</div>
+          <div class="bb-sub">Revenue, Made Visible — Signal Digital Free Tool</div>
+          <div class="bb-cards">
+            <div class="bb-card"><div class="bb-clabel">Monthly Revenue</div><div class="bb-val">$12,400</div></div>
+            <div class="bb-card"><div class="bb-clabel">Annual Revenue</div><div class="bb-val">$148,800</div></div>
+            <div class="bb-card"><div class="bb-clabel">Lifetime Value</div><div class="bb-val">$37,200</div></div>
+          </div>
+          <div class="bb-btn">Get My Full Revenue Analysis →</div>
+        </div>
+      </div>
+      <div class="port-info">
+        <h3>AI-Powered Lead Magnet Tool</h3>
+        <p>Built with React + TypeScript + Tailwind CSS. Automated lead capture via EmailJS. Deployed to Netlify. Works universally for any business or industry — captures qualified leads on autopilot 24/7.</p>
+        <div class="port-results">
+          <div class="presult"><div class="pcheck"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>React + TypeScript + Tailwind — production-grade</div>
+          <div class="presult"><div class="pcheck"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>EmailJS automated lead capture + auto-reply</div>
+          <div class="presult"><div class="pcheck"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Deployed to Netlify — scalable, fast, reliable</div>
+          <div class="presult"><div class="pcheck"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Open source on GitHub — full transparency</div>
+        </div>
+        <div class="port-btns">
+          <a href="https://signal-roi-calculator.netlify.app" target="_blank" rel="noopener" class="btn btn-gold">View Live Demo →</a>
+          <a href="https://github.com/rezwanahmed1050-lab/ai-roi-calculator" target="_blank" rel="noopener" class="btn btn-ghost">GitHub Repo</a>
+        </div>
+      </div>
+    </div>
+    <div class="ind-served fade">
+      <div class="ind-served-title">Industries We've Successfully Scaled</div>
+      <div class="ind-grid">
+        <div class="ind-item"><div class="ind-svg"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.82 6H21l-1.68 8.39c-.16.79-.84 1.36-1.64 1.36H8.1c-.82 0-1.52-.6-1.65-1.41L5 4H2V2h4.27l1.55 4z"/></svg></div><div class="ind-item-name">E-commerce & D2C</div></div>
+        <div class="ind-item"><div class="ind-svg"><svg viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg></div><div class="ind-item-name">SaaS & Tech</div></div>
+        <div class="ind-item"><div class="ind-svg"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18V17l7 4 7-4v-5.82L23 9 12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.86-5-2.86v-3.73L12 15l5-2.74v3.73z"/></svg></div><div class="ind-item-name">Coaching & Courses</div></div>
+        <div class="ind-item"><div class="ind-svg"><svg viewBox="0 0 24 24"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/></svg></div><div class="ind-item-name">Fitness & Wellness</div></div>
+        <div class="ind-item"><div class="ind-svg"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div><div class="ind-item-name">Real Estate</div></div>
+        <div class="ind-item"><div class="ind-svg"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg></div><div class="ind-item-name">Beauty & Aesthetics</div></div>
+        <div class="ind-item"><div class="ind-svg"><svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg></div><div class="ind-item-name">Local Services</div></div>
+        <div class="ind-item"><div class="ind-svg"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div><div class="ind-item-name">B2B & Consulting</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">How It Works</div>
+      <h2>From Discovery to Results in 3 Weeks</h2>
+      <p>A simple, transparent 4-step process designed to get you results fast — no matter your industry.</p>
+    </div>
+    <div class="process-row">
+      <div class="pstep fade"><div class="pnum">1</div><h3>Discovery Call</h3><p>Free 30-min consultation. We learn your business, customers, and growth goals.</p><div class="ptimeline">Week 1</div></div>
+      <div class="pstep fade"><div class="pnum">2</div><h3>Strategy Development</h3><p>Custom campaign strategy tailored to your industry and budget. No templates.</p><div class="ptimeline">Week 1–2</div></div>
+      <div class="pstep fade"><div class="pnum">3</div><h3>Campaign Launch</h3><p>Ad creatives and content created. Campaigns live within 48h of your approval.</p><div class="ptimeline">Week 2–3</div></div>
+      <div class="pstep fade"><div class="pnum">4</div><h3>Optimize & Report</h3><p>Daily monitoring, weekly optimization, monthly detailed reporting.</p><div class="ptimeline">Ongoing</div></div>
+    </div>
+    <div class="guarantee-strip fade">
+      <div class="guarantee-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+      <div class="guarantee-text">
+        <strong>60-Day Results Guarantee</strong>
+        <span>If you don't see meaningful improvement in customer acquisition within 60 days, we revise the strategy and make it right — at no extra cost.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRENCY + PRICING -->
+<div class="currency-bar">
+  <div class="cur-inner">
+    <div class="cur-label">Display pricing in</div>
+    <div class="cur-btns">
+      <button class="cur-btn active" onclick="setCur('USD','$',this)">🇺🇸 USD</button>
+      <button class="cur-btn" onclick="setCur('GBP','£',this)">🇬🇧 GBP</button>
+      <button class="cur-btn" onclick="setCur('EUR','€',this)">🇪🇺 EUR</button>
+      <button class="cur-btn" onclick="setCur('AUD','A$',this)">🇦🇺 AUD</button>
+    </div>
+    <span class="cur-note" id="curNote">All prices billed in USD</span>
+  </div>
+</div>
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">Pricing</div>
+      <h2>Transparent, Results-Based Pricing</h2>
+      <p>No hidden fees. No long-term lock-ins. Pay month to month.</p>
+    </div>
+    <div class="pricing-toggle">
+      <span class="tog-label on" id="mlabel">Monthly</span>
+      <label class="tog-sw">
+        <input type="checkbox" id="annualTog" onchange="toggleAnnual()">
+        <div class="tog-track"></div>
+      </label>
+      <span class="tog-label" id="alabel">Annual</span>
+      <span class="annual-badge">Save 20%</span>
+    </div>
+    <div class="price-grid" id="priceGrid">
+      <div class="price-card fade">
+        <div class="price-tier">Starter</div>
+        <h3>Meta Ads</h3>
+        <div class="price-row"><span class="p-cur" id="c0">$</span><span class="p-amt" id="a0">499</span><span class="p-per">/mo</span></div>
+        <div class="price-save" id="s0">Save <span id="sv0">$1,197</span>/year</div>
+        <p class="price-desc">Perfect for businesses testing digital advertising for the first time or with a focused budget.</p>
+        <ul class="price-feats">
+          <li>Campaign strategy & setup</li>
+          <li>2–3 ad sets with targeting</li>
+          <li>Ad creative & copywriting</li>
+          <li>Weekly optimization</li>
+          <li>Bi-weekly performance report</li>
+          <li>Email support</li>
+        </ul>
+        <a href="contact.html" class="price-btn pbtn-outline">Get Started</a>
+      </div>
+      <div class="price-card pop fade">
+        <div class="pop-badge">Most Popular</div>
+        <div class="price-tier">Growth</div>
+        <h3>Meta Ads + Social</h3>
+        <div class="price-row"><span class="p-cur" id="c1">$</span><span class="p-amt" id="a1">1,299</span><span class="p-per">/mo</span></div>
+        <div class="price-save" id="s1">Save <span id="sv1">$3,117</span>/year</div>
+        <p class="price-desc">Full-service marketing for established businesses ready to scale aggressively across channels.</p>
+        <ul class="price-feats">
+          <li>Advanced campaign strategy</li>
+          <li>5+ ad sets with A/B testing</li>
+          <li>Daily optimization</li>
+          <li>Social media (3 posts/week)</li>
+          <li>Community management</li>
+          <li>Weekly performance reports</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="contact.html" class="price-btn pbtn-primary">Get Started</a>
+      </div>
+      <div class="price-card fade">
+        <div class="price-tier">Premium</div>
+        <h3>Done For You</h3>
+        <div class="price-row"><span class="p-cur" id="c2">$</span><span class="p-amt" id="a2">2,499</span><span class="p-per">/mo</span></div>
+        <div class="price-save" id="s2">Save <span id="sv2">$5,997</span>/year</div>
+        <p class="price-desc">Full-scale marketing operations for high-volume businesses wanting a complete growth partner.</p>
+        <ul class="price-feats">
+          <li>Everything in Growth, plus:</li>
+          <li>Content creation (5 posts/week)</li>
+          <li>Custom AI lead magnet tool</li>
+          <li>Monthly strategy calls</li>
+          <li>Competitor analysis</li>
+          <li>Custom analytics dashboard</li>
+          <li>Dedicated account manager</li>
+        </ul>
+        <a href="contact.html" class="price-btn pbtn-outline">Get Started</a>
+      </div>
+    </div>
+    <p class="price-note">Custom packages available. <a href="contact.html">Schedule a free consultation →</a></p>
+    <div class="pay-methods">
+      <span class="pay-badge">💳 Stripe</span>
+      <span class="pay-badge">PayPal</span>
+      <span class="pay-badge">Wise</span>
+      <span class="pay-badge">Payoneer</span>
+      <span class="pay-badge">Bank Transfer</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">Client Results</div>
+      <h2>What Clients Say</h2>
+      <p>Real results from businesses across multiple industries and markets.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card fade">
+        <div class="test-badge">E-commerce · USA</div>
+        <div class="stars">★★★★★</div>
+        <blockquote>"Signal Digital increased our monthly revenue by $28K in 90 days. Their data-driven approach to Meta ads is unlike any agency we've used. Reporting is crystal clear and results speak for themselves."</blockquote>
+        <div class="test-author"><div class="avatar">S</div><div><div class="author-name">Sarah T.</div><div class="author-biz">Fashion Brand, New York</div></div></div>
+      </div>
+      <div class="test-card fade">
+        <div class="test-badge">SaaS · UK</div>
+        <div class="stars">★★★★★</div>
+        <blockquote>"We've tried 3 agencies before Signal Digital. They're the first who actually understood our SaaS product. 156 free trial signups in month one — that's never happened before."</blockquote>
+        <div class="test-author"><div class="avatar">J</div><div><div class="author-name">James M.</div><div class="author-biz">Productivity Tool, London</div></div></div>
+      </div>
+      <div class="test-card fade">
+        <div class="test-badge">Coaching · AU</div>
+        <div class="stars">★★★★★</div>
+        <blockquote>"The ROI calculator lead magnet they built captures 20+ qualified leads per week on autopilot. Best marketing investment I've made this year — period."</blockquote>
+        <div class="test-author"><div class="avatar">A</div><div><div class="author-name">Dr. Amira L.</div><div class="author-biz">Business Coach, Sydney</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-grid fade">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How is a solo AI agency different from a big firm?<div class="faq-icon"><svg viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke-linecap="round"/></svg></div></button><div class="faq-body"><p>Lower costs, faster communication, and personalized attention. AI-powered efficiency means agency-level quality without agency-level overhead. You work directly with the founder — no account managers, no bureaucracy.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you work with my industry?<div class="faq-icon"><svg viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke-linecap="round"/></svg></div></button><div class="faq-body"><p>Almost certainly yes. We've scaled businesses across e-commerce, SaaS, coaching, fitness, real estate, aesthetics, local services, B2B, and more. Book a free call and we'll assess your market honestly.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What results can I realistically expect?<div class="faq-icon"><svg viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke-linecap="round"/></svg></div></button><div class="faq-body"><p>Most clients see meaningful improvement in customer acquisition within 60–90 days. Results vary by industry, competition, and budget. We set honest expectations on your discovery call — no overpromising.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you require long-term contracts?<div class="faq-icon"><svg viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke-linecap="round"/></svg></div></button><div class="faq-body"><p>No lock-ins. Monthly retainers with 30-day notice to cancel. We keep clients with results, not contracts. A 3-month minimum is recommended since marketing takes time to optimize.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How does communication work across timezones?<div class="faq-icon"><svg viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke-linecap="round"/></svg></div></button><div class="faq-body"><p>We're based in Dhaka (GMT+6) and fully async-friendly. US/UK/AU clients communicate via email and scheduled video calls. You'll always get a response within 24 hours. We schedule calls at times that work for your timezone.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What currencies and payment methods do you accept?<div class="faq-icon"><svg viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke-linecap="round"/></svg></div></button><div class="faq-body"><p>Pricing is in USD. We accept Stripe, PayPal, Wise, Payoneer, and bank transfer. UK clients typically use Wise (lowest fees), EU clients use Stripe or bank transfer, AU clients use Wise or PayPal.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SNIPPET -->
+<section id="contact" style="background:var(--green);padding:96px 6%">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="eyebrow gold">Let's Talk</div>
+      <h2 style="color:#fff">Ready to Grow Your Business?</h2>
+      <p style="color:rgba(255,255,255,.65);max-width:520px;margin:14px auto 0">Whether you're struggling with customer acquisition or want to scale faster — let's have a real conversation. No pitch, no pressure.</p>
+    </div>
+    <div style="max-width:600px;margin:0 auto;background:#fff;border-radius:20px;padding:40px;box-shadow:var(--shadow-lg)" class="fade">
+      <div class="cform-title">Schedule a Free Strategy Call</div>
+      <div class="cform-sub">We respond within 24 hours.</div>
+      <div id="formWrap">
+        <div class="form-row">
+          <div class="fg"><label>Your Name *</label><input type="text" id="fname" placeholder="John Smith" oninput="clearErr('fname')"/><span class="field-err" id="err-fname">Please enter your name</span></div>
+          <div class="fg"><label>Email Address *</label><input type="email" id="femail" placeholder="john@business.com" oninput="clearErr('femail')"/><span class="field-err" id="err-femail">Please enter a valid email</span></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Business Name</label><input type="text" id="fcompany" placeholder="Acme Inc."/></div>
+          <div class="fg"><label>Industry *</label><select id="findustry" oninput="clearErr('findustry')"><option value="">Select industry...</option><option>E-commerce & D2C</option><option>SaaS & Tech</option><option>Coaching & Courses</option><option>Fitness & Wellness</option><option>Real Estate</option><option>Beauty & Aesthetics</option><option>Local Services</option><option>B2B & Consulting</option><option>Other</option></select><span class="field-err" id="err-findustry">Please select your industry</span></div>
+        </div>
+        <div class="fg"><label>Monthly Budget</label><select id="fbudget"><option value="">Select budget range...</option><option>Under $500/month</option><option>$500–$1,000/month</option><option>$1,000–$2,500/month</option><option>$2,500+/month</option></select></div>
+        <div class="fg"><label>What's your biggest marketing challenge?</label><textarea id="fmsg" placeholder="Tell us about your goals and what you've tried so far..."></textarea></div>
+        <button class="form-submit" id="submitBtn" onclick="submitForm('formWrap','formOk','submitBtn')">Send Message & Schedule Call →</button>
+      </div>
+      <div class="form-success" id="formOk">
+        <div class="success-ico"><svg viewBox="0 0 28 28"><path d="M23 5L10 18l-5-5-2 2 7 7L25 7z"/></svg></div>
+        <h3>Message Sent!</h3>
+        <p>Thanks for reaching out. We'll get back to you within 24 hours to schedule your free strategy call. Check your inbox!</p>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:32px;margin-top:40px;flex-wrap:wrap">
+      <div class="cdetail"><div class="cdetail-icon"><svg viewBox="0 0 20 20"><path d="M16 3H4C2.9 3 2 3.9 2 5v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 4l-6 3.75L4 7V5l6 3.75L16 5v2z"/></svg></div>rezwanahmed1050@gmail.com</div>
+      <div class="cdetail"><div class="cdetail-icon"><svg viewBox="0 0 20 20"><path d="M10 2C5.6 2 2 5.6 2 10s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm1 11H9V9h2v4zm0-6H9V5h2v2z"/></svg></div>Response within 24 hours</div>
+      <div class="cdetail"><div class="cdetail-icon"><svg viewBox="0 0 20 20"><path d="M10 2C6.1 2 3 5.1 3 9c0 5.3 7 11 7 11s7-5.7 7-11c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S8.6 6.5 10 6.5s2.5 1.1 2.5 2.5S11.4 11.5 10 11.5z"/></svg></div>Dhaka, Bangladesh · Global</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand"><div class="fbrand-mark"><svg viewBox="0 0 20 20"><path d="M10 2L3 7v6l7 5 7-5V7z" fill="currentColor"/></svg></div><span class="fbrand-text">signal.</span></div>
+        <p class="footer-tagline">Revenue, Made Visible.<br/>AI-powered digital marketing for businesses across all industries and markets.</p>
+        <div class="fsocials">
+          <a href="https://linkedin.com/in/shakib-rezwan" target="_blank" rel="noopener" class="fsocial" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://github.com/rezwanahmed1050-lab" target="_blank" rel="noopener" class="fsocial" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg></a>
+          <a href="mailto:rezwanahmed1050@gmail.com" class="fsocial" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#meta-ads">Meta Ads Management</a></li><li><a href="services.html#social-media">Social Media Management</a></li><li><a href="services.html#ai-tools">Custom AI Tools</a></li><li><a href="https://signal-roi-calculator.netlify.app" target="_blank">Free ROI Calculator</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="work.html">Our Work</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Free Strategy Call</a></li><li><a href="mailto:rezwanahmed1050@gmail.com">Send Email</a></li><li><a href="https://wa.me/8801749224182" target="_blank">WhatsApp</a></li><li><a href="https://linkedin.com/in/shakib-rezwan" target="_blank">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Signal Digital. All rights reserved.</p>
+      <div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="privacy.html#terms">Terms of Service</a></div>
+      <p class="footer-markets">Serving: US · UK · EU · AU · Worldwide</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){ if(window.emailjs) emailjs.init('YOUR_PUBLIC_KEY_HERE'); })();
+</script>
+<script src="shared.js"></script>
+<script>
+  /* TICKER */
+  (function(){
+    const items = document.querySelectorAll('#tickerWrap .ticker-item');
+    const wrap = document.getElementById('tickerWrap');
+    let cur = 0;
+    function measure(){let m=0;items.forEach(i=>{i.style.position='static';i.style.opacity='1';const w=i.offsetWidth;if(w>m)m=w;i.style.position='';i.style.opacity='';});wrap.style.minWidth=m+'px';}
+    function rotate(){
+      items[cur].classList.remove('active');
+      items[cur].style.transform='translateY(-8px)';
+      const prev=cur;
+      setTimeout(()=>{items[prev].style.transform='';},600);
+      cur=(cur+1)%items.length;
+      items[cur].classList.add('active');
+    }
+    measure();
+    setInterval(rotate,2500);
+  })();
+
+  /* COUNTER */
+  (function(){
+    const el=document.getElementById('counter');
+    const fill=document.getElementById('cfill');
+    if(!el)return;
+    const obs=new IntersectionObserver(entries=>{
+      if(entries[0].isIntersecting){
+        animCount(el,284000,2400,'$','');
+        setTimeout(()=>{if(fill)fill.style.width='76%';},300);
+        obs.disconnect();
+      }
+    },{threshold:0.3});
+    obs.observe(el);
+  })();
+
+  /* CURRENCY */
+  const rates={USD:1,GBP:0.79,EUR:0.92,AUD:1.53};
+  const base=[499,1299,2499];
+  let sym='$',code='USD',annual=false;
+  function setCur(c,s,btn){
+    code=c;sym=s;
+    document.querySelectorAll('.cur-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const note=document.getElementById('curNote');
+    if(note)note.textContent=c==='USD'?'All prices billed in USD':'Approximate conversion · Billed in USD';
+    updatePrices();
+  }
+  function toggleAnnual(){
+    annual=document.getElementById('annualTog').checked;
+    document.getElementById('mlabel').classList.toggle('on',!annual);
+    document.getElementById('alabel').classList.toggle('on',annual);
+    document.getElementById('priceGrid').classList.toggle('show-save',annual);
+    updatePrices();
+  }
+  function updatePrices(){
+    const r=rates[code];
+    base.forEach((b,i)=>{
+      const mo=Math.round(b*r);
+      const an=Math.round(b*r*0.8);
+      const disp=annual?an:mo;
+      document.getElementById('c'+i).textContent=sym;
+      document.getElementById('a'+i).textContent=disp.toLocaleString();
+      document.getElementById('sv'+i).textContent=sym+(mo*12-an*12).toLocaleString();
+    });
+  }
+</script>
+</body>
+</html>
