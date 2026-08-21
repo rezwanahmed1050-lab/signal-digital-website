@@ -101,19 +101,24 @@ function submitForm(formId, successId, btnId) {
 
   if (btn) { btn.disabled = true; btn.innerHTML = '<span>Sending...</span>'; }
 
-  /* EmailJS send — replace YOUR_SERVICE_ID / YOUR_TEMPLATE_ID / YOUR_PUBLIC_KEY */
+  /* EmailJS send with NEW credentials */
   const params = {
     from_name: name.value.trim(),
     from_email: email.value.trim(),
     industry: industry ? industry.value : 'N/A',
     budget: (document.getElementById('fbudget') || {}).value || 'N/A',
-    phone: (document.getElementById('fphone') || {}).value || '',
+    phone_number: (document.getElementById('fphone') || {}).value || 'Not provided',
     message: (document.getElementById('fmsg') || {}).value || '',
     to_email: 'rezwanahmed1050@gmail.com'
   };
 
   if (window.emailjs) {
-    emailjs.send('service_pz42fg2', 'template_il9uifj', params)
+    /* Send Admin Notification */
+    emailjs.send('service_gen2xxn', 'template_fvi10vn', params)
+      .then(() => {
+        /* Send Auto-Reply to Client */
+        return emailjs.send('service_gen2xxn', 'template_y1shs49', params);
+      })
       .then(() => showSuccess(formId, successId))
       .catch(() => {
         if (btn) { btn.disabled = false; btn.innerHTML = 'Send Message →'; }
