@@ -352,55 +352,53 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  (function(){ if(window.emailjs) emailjs.init('sOXgrA-CM1wEpPZuc'); })();
-</script>
 <script src="shared.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" onload="emailjs.init('sOXgrA-CM1wEpPZuc')"></script>
 <script>
-  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
   function handleSubmit() {
-    const name  = document.getElementById('fname');
-    const email = document.getElementById('femail');
-    const ind   = document.getElementById('findustry');
-    const btn   = document.getElementById('submitBtn');
+    var nameEl  = document.getElementById('fname');
+    var emailEl = document.getElementById('femail');
+    var indEl   = document.getElementById('findustry');
+    var btn     = document.getElementById('submitBtn');
 
-    if (!name.value.trim())              return showErr('fname',    'Please enter your name');
-    if (!emailRe.test(email.value.trim())) return showErr('femail', 'Please enter a valid email address');
-    if (!ind.value)                      return showErr('findustry','Please select your industry');
+    if (!nameEl.value.trim()) return showErr('fname', 'Please enter your name');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim())) return showErr('femail', 'Please enter a valid email address');
+    if (!indEl.value) return showErr('findustry', 'Please select your industry');
 
     btn.disabled = true;
     btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" style="animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" stroke-opacity=".3"/><path d="M12 2a10 10 0 0 1 10 10"/></svg> Sending...';
 
-    const params = {
-      from_name:    name.value.trim(),
-      from_email:   email.value.trim(),
-      phone:        document.getElementById('fphone').value || '',
-      company:      document.getElementById('fcompany').value || '',
-      industry:     ind.value,
-      service:      document.getElementById('fservice').value || 'Not specified',
-      budget:       document.getElementById('fbudget').value || 'Not specified',
-      message:      document.getElementById('fmsg').value || '',
-      how_heard:    document.getElementById('fhear').value || '',
-      to_email:     'rezwanahmed1050@gmail.com'
+    var params = {
+      from_name:  nameEl.value.trim(),
+      from_email: emailEl.value.trim(),
+      phone:      document.getElementById('fphone').value || 'Not provided',
+      company:    document.getElementById('fcompany').value || 'Not provided',
+      industry:   indEl.value,
+      service:    document.getElementById('fservice').value || 'Not specified',
+      budget:     document.getElementById('fbudget').value || 'Not specified',
+      message:    document.getElementById('fmsg').value || 'No message provided',
+      how_heard:  document.getElementById('fhear').value || 'Not specified',
+      to_email:   'rezwanahmed1050@gmail.com'
     };
 
-    const doSuccess = () => {
+    function doSuccess() {
       document.getElementById('formWrap').style.display = 'none';
       document.getElementById('formOk').style.display   = 'block';
-    };
+    }
 
     if (window.emailjs) {
       emailjs.send('service_gen2xxn', 'template_fvi10vn', params)
         .then(doSuccess)
-        .catch(() => {
+        .catch(function(err) {
+          console.error('EmailJS error:', err);
           btn.disabled = false;
-          btn.innerHTML = 'Send Message & Schedule Free Call →';
+          btn.innerHTML = 'Send Message &amp; Schedule Free Call &#x2192;';
           alert('There was an issue sending your message. Please email us directly at rezwanahmed1050@gmail.com or message us on WhatsApp.');
         });
     } else {
-      setTimeout(doSuccess, 800);
+      btn.disabled = false;
+      btn.innerHTML = 'Send Message &amp; Schedule Free Call &#x2192;';
+      alert('Email system is still loading, please wait a moment and try again.');
     }
   }
 </script>
