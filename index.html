@@ -827,10 +827,43 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-  (function(){ if(window.emailjs) emailjs.init('sOXgrA-CM1wEpPZuc'); })();
+  (function () {
+    if (window.emailjs) emailjs.init('sOXgrA-CM1wEpPZuc');
+  })();
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+
+      // Send Admin Notification
+      emailjs.sendForm('service_gen2xxn', 'template_fvi10vn', this)
+        .then(function () {
+          // Send Auto-Reply
+          return emailjs.sendForm('service_gen2xxn', 'template_y1shs49', form);
+        })
+        .then(function () {
+          alert('Message sent successfully!');
+          form.reset();
+          btn.textContent = originalText;
+        })
+        .catch(function (error) {
+          alert('Failed to send message: ' + JSON.stringify(error));
+          btn.textContent = originalText;
+        });
+    });
+  });
 </script>
-<script src="shared.js"></script>
+
 <script>
+  /* TICKER */
+  (function () {
   /* TICKER */
   (function(){
     const items = document.querySelectorAll('#tickerWrap .ticker-item');
